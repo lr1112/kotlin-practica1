@@ -1,6 +1,7 @@
 package com.example.examplemvvm.di
 
-import com.example.examplemvvm.data.Model.network.QuoteApiClient
+
+import com.example.examplemvvm.data.network.QuoteApiClient
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -23,7 +24,7 @@ object NetworkModule {
 
     @Singleton
     @Provides
-    fun provideQuoteApiClient(retrofit: Retrofit):QuoteApiClient{
+    fun provideQuoteApiClient(retrofit: Retrofit): QuoteApiClient {
         return retrofit.create(QuoteApiClient::class.java)
 
     }
